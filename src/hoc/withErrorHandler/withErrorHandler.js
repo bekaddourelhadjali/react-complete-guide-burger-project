@@ -7,12 +7,12 @@ const withErrorHandler = (WrappedComponent, axios) => {
             constructor () {
                 super();
                 this.reqInterceptor = axios.interceptors.request.use(req=>{
-                    console.log(req);
+                    // console.log(req);
                     this.setState({error: null});
                     return req;
                 });
                 this.resInterceptor = axios.interceptors.response.use(res=> {
-                    console.log(res);
+                    // console.log(res);
                     return res;
                 },error =>{
                     
